@@ -18,7 +18,7 @@ class GitInfoController {
 
     @GetMapping("")
     fun getEndpointList(): List<String> {
-        return gitInfoRepo.endpointList;
+        return gitInfoRepo.endpointList
     }
 
     @GetMapping("gitCommitAmend")
@@ -29,5 +29,8 @@ class GitInfoController {
     @GetMapping("gitRebase")
     fun getInfoRebase() : CommandDescription {
         return gitInfoRepo.getInfoRebase()
+    @GetMapping("gitCherry-Pick")
+    fun getInfoCherryPick() : CommandDescription {
+        return gitInfoRepo.getInfoCherryPick()
     }
 }
